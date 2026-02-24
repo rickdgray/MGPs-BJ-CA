@@ -70,34 +70,34 @@
     End Sub
 
     Public Function SameAs(ByVal fromHand As BJCAHandClass) As Boolean
-        SameAs = (Cards(0) = fromHand.Cards(0) And _
-        Cards(1) = fromHand.Cards(1) And _
-        Cards(2) = fromHand.Cards(2) And _
-        Cards(3) = fromHand.Cards(3) And _
-        Cards(4) = fromHand.Cards(4) And _
-        Cards(5) = fromHand.Cards(5) And _
-        Cards(6) = fromHand.Cards(6) And _
-        Cards(7) = fromHand.Cards(7) And _
-        Cards(8) = fromHand.Cards(8) And _
-        Cards(9) = fromHand.Cards(9) And _
-        Cards(10) = fromHand.Cards(10) And _
-        NumCards = fromHand.NumCards And _
-        Total = fromHand.Total And _
+        SameAs = (Cards(0) = fromHand.Cards(0) And
+        Cards(1) = fromHand.Cards(1) And
+        Cards(2) = fromHand.Cards(2) And
+        Cards(3) = fromHand.Cards(3) And
+        Cards(4) = fromHand.Cards(4) And
+        Cards(5) = fromHand.Cards(5) And
+        Cards(6) = fromHand.Cards(6) And
+        Cards(7) = fromHand.Cards(7) And
+        Cards(8) = fromHand.Cards(8) And
+        Cards(9) = fromHand.Cards(9) And
+        Cards(10) = fromHand.Cards(10) And
+        NumCards = fromHand.NumCards And
+        Total = fromHand.Total And
         Soft = fromHand.Soft)
     End Function
 
     Public Function Includes(ByVal includedHand As BJCAHandClass) As Boolean
-        Includes = (Cards(0) >= includedHand.Cards(0) And _
-        Cards(1) >= includedHand.Cards(1) And _
-        Cards(2) >= includedHand.Cards(2) And _
-        Cards(3) >= includedHand.Cards(3) And _
-        Cards(4) >= includedHand.Cards(4) And _
-        Cards(5) >= includedHand.Cards(5) And _
-        Cards(6) >= includedHand.Cards(6) And _
-        Cards(7) >= includedHand.Cards(7) And _
-        Cards(8) >= includedHand.Cards(8) And _
-        Cards(9) >= includedHand.Cards(9) And _
-        Cards(10) >= includedHand.Cards(10) And _
+        Includes = (Cards(0) >= includedHand.Cards(0) And
+        Cards(1) >= includedHand.Cards(1) And
+        Cards(2) >= includedHand.Cards(2) And
+        Cards(3) >= includedHand.Cards(3) And
+        Cards(4) >= includedHand.Cards(4) And
+        Cards(5) >= includedHand.Cards(5) And
+        Cards(6) >= includedHand.Cards(6) And
+        Cards(7) >= includedHand.Cards(7) And
+        Cards(8) >= includedHand.Cards(8) And
+        Cards(9) >= includedHand.Cards(9) And
+        Cards(10) >= includedHand.Cards(10) And
         NumCards >= includedHand.NumCards)
     End Function
 

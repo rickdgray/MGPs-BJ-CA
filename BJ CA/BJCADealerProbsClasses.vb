@@ -49,15 +49,15 @@ End Class
     Public Function GetHashKey(ByVal standonsoft As Integer, ByVal ndecks As Integer, ByVal hand As BJCAHandClass, Optional ByVal countName As String = "None") As String
         Dim keystr As String
 
-        If hand.Cards(1) > ndecks * 4 Or _
-           hand.Cards(2) > ndecks * 4 Or _
-           hand.Cards(3) > ndecks * 4 Or _
-           hand.Cards(4) > ndecks * 4 Or _
-           hand.Cards(5) > ndecks * 4 Or _
-           hand.Cards(6) > ndecks * 4 Or _
-           hand.Cards(7) > ndecks * 4 Or _
-           hand.Cards(8) > ndecks * 4 Or _
-           hand.Cards(9) > ndecks * 4 Or _
+        If hand.Cards(1) > ndecks * 4 Or
+           hand.Cards(2) > ndecks * 4 Or
+           hand.Cards(3) > ndecks * 4 Or
+           hand.Cards(4) > ndecks * 4 Or
+           hand.Cards(5) > ndecks * 4 Or
+           hand.Cards(6) > ndecks * 4 Or
+           hand.Cards(7) > ndecks * 4 Or
+           hand.Cards(8) > ndecks * 4 Or
+           hand.Cards(9) > ndecks * 4 Or
            hand.Cards(10) > ndecks * 16 Then
 
             keystr = "None-S17-0-0-0-0-0-0-0-0-0-0"
@@ -83,15 +83,15 @@ End Class
     Public Function GetHashKey(ByVal standonsoft As Integer, ByVal shoe As BJCAShoeClass, ByVal hand As BJCAHandClass, Optional ByVal countName As String = "None") As String
         Dim keystr As String
 
-        If hand.Cards(1) > shoe.Cards(1) Or _
-           hand.Cards(2) > shoe.Cards(2) Or _
-           hand.Cards(3) > shoe.Cards(3) Or _
-           hand.Cards(4) > shoe.Cards(4) Or _
-           hand.Cards(5) > shoe.Cards(5) Or _
-           hand.Cards(6) > shoe.Cards(6) Or _
-           hand.Cards(7) > shoe.Cards(7) Or _
-           hand.Cards(8) > shoe.Cards(8) Or _
-           hand.Cards(9) > shoe.Cards(9) Or _
+        If hand.Cards(1) > shoe.Cards(1) Or
+           hand.Cards(2) > shoe.Cards(2) Or
+           hand.Cards(3) > shoe.Cards(3) Or
+           hand.Cards(4) > shoe.Cards(4) Or
+           hand.Cards(5) > shoe.Cards(5) Or
+           hand.Cards(6) > shoe.Cards(6) Or
+           hand.Cards(7) > shoe.Cards(7) Or
+           hand.Cards(8) > shoe.Cards(8) Or
+           hand.Cards(9) > shoe.Cards(9) Or
            hand.Cards(10) > shoe.Cards(10) Then
 
             keystr = "None-S17-0-0-0-0-0-0-0-0-0-0"

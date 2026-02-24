@@ -27,7 +27,7 @@ Public Class BJCAMainForm
         '        testobject = BJCAMethods.CloneObject(testobject2)
         '        Next i
         runningtime2 = Environment.TickCount - runningtime2
-        MsgBox("Brute force: " + CStr(runningtime) + Chr(13) + "Cloned: " + CStr(runningtime2), MsgBoxStyle.OKOnly)
+        MsgBox("Brute force: " + CStr(runningtime) + Chr(13) + "Cloned: " + CStr(runningtime2), MsgBoxStyle.OkOnly)
 
         i = 1
     End Sub
@@ -3088,7 +3088,7 @@ Public Class BJCAMainForm
         Me.Note2LabelBJTab.Name = "Note2LabelBJTab"
         Me.Note2LabelBJTab.Size = New System.Drawing.Size(327, 37)
         Me.Note2LabelBJTab.TabIndex = 160
-        Me.Note2LabelBJTab.Text = "*Note:  Suited BJ Must Win applies to both General and Suited Specific Ten Bonuse" & _
+        Me.Note2LabelBJTab.Text = "*Note:  Suited BJ Must Win applies to both General and Suited Specific Ten Bonuse" &
         "s"
         Me.Note2LabelBJTab.Visible = False
         '
@@ -4179,8 +4179,8 @@ Public Class BJCAMainForm
         Me.PairsRuleApplyLabelFSTab.Name = "PairsRuleApplyLabelFSTab"
         Me.PairsRuleApplyLabelFSTab.Size = New System.Drawing.Size(307, 64)
         Me.PairsRuleApplyLabelFSTab.TabIndex = 7
-        Me.PairsRuleApplyLabelFSTab.Text = "*Note: Table Total based rules will not apply to pairs and only exact match ""Othe" & _
-        "r"" rules will.  AA/22 pairs will assume to have a secondary Hit strategy if assi" & _
+        Me.PairsRuleApplyLabelFSTab.Text = "*Note: Table Total based rules will not apply to pairs and only exact match ""Othe" &
+        "r"" rules will.  AA/22 pairs will assume to have a secondary Hit strategy if assi" &
         "gned to P."
         Me.PairsRuleApplyLabelFSTab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -6144,11 +6144,11 @@ Public Class BJCAMainForm
             DDREarlyButtonSTab.Enabled = False
         End If
         If (RDACheckDTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             RDACheckDTab.Checked = False
         End If
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
@@ -6163,11 +6163,11 @@ Public Class BJCAMainForm
             DDREarlyButtonSTab.Enabled = True
         End If
         If (RDACheckDTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             RDACheckDTab.Checked = False
         End If
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
@@ -6183,11 +6183,11 @@ Public Class BJCAMainForm
             DDREarlyButtonSTab.Enabled = True
         End If
         If (RDACheckDTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             RDACheckDTab.Checked = False
         End If
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
@@ -6203,11 +6203,11 @@ Public Class BJCAMainForm
             DDREarlyButtonSTab.Enabled = True
         End If
         If (RDACheckDTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             RDACheckDTab.Checked = False
         End If
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO And OBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO And OBBO.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
@@ -6223,11 +6223,11 @@ Public Class BJCAMainForm
             DDREarlyButtonSTab.Enabled = True
         End If
         If (RDACheckDTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             RDACheckDTab.Checked = False
         End If
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
@@ -6749,7 +6749,7 @@ Public Class BJCAMainForm
     Private Sub RDACheckDTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RDACheckDTab.CheckedChanged
         If RDACheckDTab.Checked Then
             If (RDACheckDTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked) Then
-                MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OKOnly)
+                MsgBox("Redoubling cannot be used with BBO, OBBO or AOBBO.", MsgBoxStyle.OkOnly)
                 RDACheckDTab.Checked = False
             Else
                 RDDepthBoxDTab.Enabled = True
@@ -7032,7 +7032,7 @@ Public Class BJCAMainForm
 
     Private Sub CDZButtonSpTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CDZButtonSpTab.CheckedChanged
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked Or DDRPSCheckDTab.Checked Or RDAPSCheckDTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO, AOBBO, DDR post-split or RDA post-split.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO, AOBBO, DDR post-split or RDA post-split.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
         If Not CDZButtonSpTab.Checked Then
@@ -7043,14 +7043,14 @@ Public Class BJCAMainForm
 
     Private Sub CDPButtonSpTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CDPButtonSpTab.CheckedChanged
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked Or DDRPSCheckDTab.Checked Or RDAPSCheckDTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO, AOBBO, DDR post-split or RDA post-split.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO, AOBBO, DDR post-split or RDA post-split.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
 
     Private Sub CDPNButtonSpTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CDPNButtonSpTab.CheckedChanged
         If (CDPButtonSpTab.Checked Or CDPNButtonSpTab.Checked) And (BBOButtonMTab.Checked Or OBBOButtonMTab.Checked Or AOBBOButtonMTab.Checked Or DDRPSCheckDTab.Checked Or RDAPSCheckDTab.Checked) Then
-            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO, AOBBO, DDR post-split or RDA post-split.", MsgBoxStyle.OKOnly)
+            MsgBox("CD-P and CD-PN cannot be used with BBO, OBBO, AOBBO, DDR post-split or RDA post-split.", MsgBoxStyle.OkOnly)
             CDZButtonSpTab.Checked = True
         End If
     End Sub
@@ -7463,7 +7463,7 @@ Public Class BJCAMainForm
         Next card
 
         If Not valid Then
-            MsgBox("The net forced shoe suit values must match the forced shoe values.", MsgBoxStyle.OKOnly)
+            MsgBox("The net forced shoe suit values must match the forced shoe values.", MsgBoxStyle.OkOnly)
             e.Cancel = True
         End If
 
@@ -8006,7 +8006,7 @@ Public Class BJCAMainForm
 
         currentRule = BonusRulesCheckListBoxBTab.SelectedIndex
         If currentRule = -1 Then
-            MsgBox("Please select a bonus rule you would like to delete.", MsgBoxStyle.OKOnly)
+            MsgBox("Please select a bonus rule you would like to delete.", MsgBoxStyle.OkOnly)
         Else
             If MsgBox("Are you sure you would like to delete the Bonus Rule: " + FormRules.BonusRulesList.L(currentRule).Name + "?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 FormRules.BonusRulesList.DeleteBonusRule(currentRule)
@@ -8031,14 +8031,14 @@ Public Class BJCAMainForm
         If rulePresent Then
             GetFormCurrentBonusRule()
             If Not (BonusRule.Hand.NumCards > 0 Or BonusRule.Hand.Total > 0 Or (Not EitherCheckBTab.Checked And HardOnlyCheckBTab.Checked) Or SoftOnlyCheckBTab.Checked Or SuitedCheckBTab.Checked) Then
-                MsgBox("This rule is empty.", MsgBoxStyle.OKOnly)
+                MsgBox("This rule is empty.", MsgBoxStyle.OkOnly)
             Else
                 FormRules.BonusRulesList.L(currentRule) = CType(CloneObject(BonusRule), BJCABonusRulesClass)
                 BonusRulesCheckListBoxBTab.SelectedIndex = currentRule
             End If
         Else
             BonusRulesCheckListBoxBTab.SelectedIndex = -1
-            MsgBox("The rule name does not match any names in the current rules list.", MsgBoxStyle.OKOnly)
+            MsgBox("The rule name does not match any names in the current rules list.", MsgBoxStyle.OkOnly)
         End If
     End Sub
 
@@ -8055,15 +8055,15 @@ Public Class BJCAMainForm
         Next i
         If rulePresent Then
             BonusRulesCheckListBoxBTab.SelectedIndex = -1
-            MsgBox("A rule by this name already exists.", MsgBoxStyle.OKOnly)
+            MsgBox("A rule by this name already exists.", MsgBoxStyle.OkOnly)
         Else
             GetFormCurrentBonusRule()
             If (BonusRule.PayoffGeneral = 0 And BonusRule.PayoffSuited = 0 And BonusRule.PayoffSpecificSuit = 0 And PayoffGeneralBJBoxBTab.Text = -1 And PayoffSuitedBJBoxBTab.Text = -1 And PayoffSpecificSuitBJBoxBTab.Text = -1) Then
-                MsgBox("This rule is empty.", MsgBoxStyle.OKOnly)
+                MsgBox("This rule is empty.", MsgBoxStyle.OkOnly)
             ElseIf Not (BonusRule.Hand.NumCards > 0 Or BonusRule.Hand.Total > 0 Or (Not EitherCheckBTab.Checked And HardOnlyCheckBTab.Checked) Or SoftOnlyCheckBTab.Checked Or SuitedCheckBTab.Checked) Then
-                MsgBox("This rule is empty.", MsgBoxStyle.OKOnly)
+                MsgBox("This rule is empty.", MsgBoxStyle.OkOnly)
             ElseIf BonusRule.Name = "" Then
-                MsgBox("Please enter a name for this rule.", MsgBoxStyle.OKOnly)
+                MsgBox("Please enter a name for this rule.", MsgBoxStyle.OkOnly)
             Else
                 BonusRule.RuleOn = False
                 FormRules.BonusRulesList.AddBonusRule(BonusRule)
@@ -8213,11 +8213,11 @@ Public Class BJCAMainForm
             tempTotal += 10
         End If
         If tempTotal > 21 Then
-            MsgBox("Total of hand must be <=21.", MsgBoxStyle.OKOnly)
+            MsgBox("Total of hand must be <=21.", MsgBoxStyle.OkOnly)
             DirectCast(sender, IndexedTextBox).Text = 0
             e.Cancel = True
         ElseIf tempTotal = 21 And tempNumCards = 2 Then
-            MsgBox("Blackjacks are handled under the BJ Bonuses Tab.", MsgBoxStyle.OKOnly)
+            MsgBox("Blackjacks are handled under the BJ Bonuses Tab.", MsgBoxStyle.OkOnly)
             DirectCast(sender, IndexedTextBox).Text = 0
             e.Cancel = True
         Else
@@ -8805,7 +8805,7 @@ Public Class BJCAMainForm
 
     Private Sub PreSplitCheckBTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreSplitCheckBTab.CheckedChanged
         If Not PreSplitCheckBTab.Checked And Not PostSplitCheckBTab.Checked Then
-            MsgBox("The rule must be applied pre-split, post-split or both pre- and post-split", MsgBoxStyle.OKOnly)
+            MsgBox("The rule must be applied pre-split, post-split or both pre- and post-split", MsgBoxStyle.OkOnly)
             PreSplitCheckBTab.Checked = True
         End If
         BonusRulesCheckListBoxBTab.SelectedIndex() = -1
@@ -8813,7 +8813,7 @@ Public Class BJCAMainForm
 
     Private Sub PostSplitCheckBTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PostSplitCheckBTab.CheckedChanged
         If Not PreSplitCheckBTab.Checked And Not PostSplitCheckBTab.Checked Then
-            MsgBox("The rule must be applied pre-split, post-split or both pre- and post-split", MsgBoxStyle.OKOnly)
+            MsgBox("The rule must be applied pre-split, post-split or both pre- and post-split", MsgBoxStyle.OkOnly)
             PostSplitCheckBTab.Checked = True
         End If
         BonusRulesCheckListBoxBTab.SelectedIndex() = -1
@@ -8821,7 +8821,7 @@ Public Class BJCAMainForm
 
     Private Sub AceUpCheckBTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AceUpCheckBTab.CheckedChanged
         If (PayoffGeneralBJBoxBTab.Text <> -1 Or PayoffSuitedBJBoxBTab.Text <> -1 Or PayoffSpecificSuitBJBoxBTab.Text <> -1) And Not AceUpCheckBTab.Checked And Not TenUpCheckBTab.Checked Then
-            MsgBox("The Dealer BJ Payoff must apply to either Ace up, Ten up or both.", MsgBoxStyle.OKOnly)
+            MsgBox("The Dealer BJ Payoff must apply to either Ace up, Ten up or both.", MsgBoxStyle.OkOnly)
             AceUpCheckBTab.Checked = True
         End If
         BonusRulesCheckListBoxBTab.SelectedIndex() = -1
@@ -8829,7 +8829,7 @@ Public Class BJCAMainForm
 
     Private Sub TenUpCheckBTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TenUpCheckBTab.CheckedChanged
         If (PayoffGeneralBJBoxBTab.Text <> -1 Or PayoffSuitedBJBoxBTab.Text <> -1 Or PayoffSpecificSuitBJBoxBTab.Text <> -1) And Not AceUpCheckBTab.Checked And Not TenUpCheckBTab.Checked Then
-            MsgBox("The Dealer BJ Payoff must apply to either Ace up, Ten up or both.", MsgBoxStyle.OKOnly)
+            MsgBox("The Dealer BJ Payoff must apply to either Ace up, Ten up or both.", MsgBoxStyle.OkOnly)
             TenUpCheckBTab.Checked = True
         End If
         BonusRulesCheckListBoxBTab.SelectedIndex() = -1
@@ -9000,11 +9000,11 @@ Public Class BJCAMainForm
 
     Private Sub ForcednCardBoxFTab_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles ForcednCDBoxFSTab.Validating
         If Not CheckValidInteger(ForcednCDBoxFSTab.Text, 0, 21, False) Then
-            MsgBox("Please either enter 0 or a number between 2 and 21.", MsgBoxStyle.OKOnly)
+            MsgBox("Please either enter 0 or a number between 2 and 21.", MsgBoxStyle.OkOnly)
             ForcednCDBoxFSTab.Text = 2
             e.Cancel = True
         ElseIf (ForcednCDBoxFSTab.Text > 0 And ForcednCDBoxFSTab.Text < 2) Then
-            MsgBox("Please either enter 0 or a number between 2 and 21.", MsgBoxStyle.OKOnly)
+            MsgBox("Please either enter 0 or a number between 2 and 21.", MsgBoxStyle.OkOnly)
             ForcednCDBoxFSTab.Text = 2
             e.Cancel = True
         End If
@@ -9012,13 +9012,13 @@ Public Class BJCAMainForm
 
     Private Sub ForcedTablePreCheckFSTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ForcedTablePreCheckFSTab.CheckedChanged
         If Not ForcedTablePreCheckFSTab.Checked And Not ForcedTablePostCheckFSTab.Checked Then
-            MsgBox("If neither the pre-split nor the post-split boxes are checked then the forced rules tables will be ignored.", MsgBoxStyle.OKOnly)
+            MsgBox("If neither the pre-split nor the post-split boxes are checked then the forced rules tables will be ignored.", MsgBoxStyle.OkOnly)
         End If
     End Sub
 
     Private Sub ForcedTablePostCheckFSTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ForcedTablePostCheckFSTab.CheckedChanged
         If Not ForcedTablePreCheckFSTab.Checked And Not ForcedTablePostCheckFSTab.Checked Then
-            MsgBox("If neither the pre-split nor the post-split boxes are checked then the forced rules tables will be ignored.", MsgBoxStyle.OKOnly)
+            MsgBox("If neither the pre-split nor the post-split boxes are checked then the forced rules tables will be ignored.", MsgBoxStyle.OkOnly)
         End If
     End Sub
 
@@ -9986,7 +9986,7 @@ Public Class BJCAMainForm
             tempTotal += 10
         End If
         If tempTotal > 21 Then
-            MsgBox("Total of hand must be <=21.", MsgBoxStyle.OKOnly)
+            MsgBox("Total of hand must be <=21.", MsgBoxStyle.OkOnly)
             DirectCast(sender, IndexedTextBox).Text = 0
             e.Cancel = True
         Else
@@ -10313,7 +10313,7 @@ Public Class BJCAMainForm
 
         currentRule = ForcedRulesCheckListBoxFSTab.SelectedIndex
         If currentRule = -1 Then
-            MsgBox("Please select a bonus rule you would like to delete.", MsgBoxStyle.OKOnly)
+            MsgBox("Please select a bonus rule you would like to delete.", MsgBoxStyle.OkOnly)
         Else
             If MsgBox("Are you sure you would like to delete the Forced Rule: " + FormRules.ForcedStrat.ForcedRulesList.L(currentRule).Name + "?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 FormRules.ForcedStrat.ForcedRulesList.DeleteForcedRule(currentRule)
@@ -10338,14 +10338,14 @@ Public Class BJCAMainForm
         If rulePresent Then
             GetFormCurrentForcedRule()
             If Not (ForcedRule.Hand.NumCards > 0 Or ForcedRule.Hand.Total > 0 Or ForcedRule.Hand.Soft = True) Then
-                MsgBox("This rule is empty.", MsgBoxStyle.OKOnly)
+                MsgBox("This rule is empty.", MsgBoxStyle.OkOnly)
             Else
                 FormRules.ForcedStrat.ForcedRulesList.L(currentRule) = CType(CloneObject(ForcedRule), BJCAForcedRulesClass)
                 ForcedRulesCheckListBoxFSTab.SelectedIndex = currentRule
             End If
         Else
             ForcedRulesCheckListBoxFSTab.SelectedIndex = -1
-            MsgBox("The rule name does not match any names in the current rules list.", MsgBoxStyle.OKOnly)
+            MsgBox("The rule name does not match any names in the current rules list.", MsgBoxStyle.OkOnly)
         End If
     End Sub
 
@@ -10362,11 +10362,11 @@ Public Class BJCAMainForm
         Next rule
         If rulePresent Then
             ForcedRulesCheckListBoxFSTab.SelectedIndex = -1
-            MsgBox("A rule by this name already exists.", MsgBoxStyle.OKOnly)
+            MsgBox("A rule by this name already exists.", MsgBoxStyle.OkOnly)
         Else
             GetFormCurrentForcedRule()
             If Not (ForcedRule.Hand.NumCards > 0 Or ForcedRule.Hand.Total > 0 Or ForcedRule.Hand.Soft = True) Then
-                MsgBox("This rule is empty.", MsgBoxStyle.OKOnly)
+                MsgBox("This rule is empty.", MsgBoxStyle.OkOnly)
             Else
                 ForcedRule.RuleOn = False
                 FormRules.ForcedStrat.ForcedRulesList.AddForcedRule(ForcedRule)
@@ -10442,7 +10442,7 @@ Public Class BJCAMainForm
     End Sub
 
     Private Sub DeleteAllForcedRulesButtonFSTab_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteAllForcedRulesButtonFSTab.Click
-        If MsgBox("Are you sure you would like to delete all the Forced Rules in the list?", MsgBoxStyle.OKCancel) = MsgBoxResult.OK Then
+        If MsgBox("Are you sure you would like to delete all the Forced Rules in the list?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
             DeleteAllForcedRules()
         End If
     End Sub
@@ -10579,7 +10579,7 @@ Public Class BJCAMainForm
 
     Private Sub PreSplitCheckFSTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreSplitCheckFSTab.CheckedChanged
         If Not PreSplitCheckFSTab.Checked And Not PostSplitCheckFSTab.Checked And Not PostDoubleCheckFSTab.Checked Then
-            MsgBox("The rule must be applied to at least some hands.", MsgBoxStyle.OKOnly)
+            MsgBox("The rule must be applied to at least some hands.", MsgBoxStyle.OkOnly)
             PreSplitCheckFSTab.Checked = True
         End If
         If PreSplitCheckFSTab.Checked Then
@@ -10590,7 +10590,7 @@ Public Class BJCAMainForm
 
     Private Sub PostSplitCheckFSTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PostSplitCheckFSTab.CheckedChanged
         If Not PreSplitCheckFSTab.Checked And Not PostSplitCheckFSTab.Checked And Not PostDoubleCheckFSTab.Checked Then
-            MsgBox("The rule must be applied to at least some hands.", MsgBoxStyle.OKOnly)
+            MsgBox("The rule must be applied to at least some hands.", MsgBoxStyle.OkOnly)
             PostSplitCheckFSTab.Checked = True
         End If
         If PostSplitCheckFSTab.Checked Then
@@ -10601,7 +10601,7 @@ Public Class BJCAMainForm
 
     Private Sub PostDoubleCheckFSTab_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PostDoubleCheckFSTab.CheckedChanged
         If Not PreSplitCheckFSTab.Checked And Not PostSplitCheckFSTab.Checked And Not PostDoubleCheckFSTab.Checked Then
-            MsgBox("The rule must be applied to at least some hands.", MsgBoxStyle.OKOnly)
+            MsgBox("The rule must be applied to at least some hands.", MsgBoxStyle.OkOnly)
             PostDoubleCheckFSTab.Checked = True
         End If
         If PostDoubleCheckFSTab.Checked Then
@@ -11242,7 +11242,7 @@ Public Class BJCAMainForm
             ofd.ValidateNames = True
             If ofd.ShowDialog() = Windows.Forms.DialogResult.OK Then
                 Try
-                    templist = CType(LoadObjectFile(ofd.FileName), BJCAForcedRulesListClass)
+                    tempList = CType(LoadObjectFile(ofd.FileName), BJCAForcedRulesListClass)
                     DeleteAllForcedRules()
                     FormRules.ForcedStrat.ForcedRulesList = CloneObject(tempList)
                     FormRules.FileNames.ForcedRulesFileName = ofd.FileName

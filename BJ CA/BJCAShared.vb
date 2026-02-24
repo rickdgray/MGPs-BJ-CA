@@ -202,7 +202,7 @@ Public Class BJCAShared
             valid = False
         End If
         If Not valid And showMessage Then
-            MsgBox("Please enter an integer between " + CStr(minnum) + " and " + CStr(maxnum) + ".", MsgBoxStyle.OKOnly)
+            MsgBox("Please enter an integer between " + CStr(minnum) + " and " + CStr(maxnum) + ".", MsgBoxStyle.OkOnly)
         End If
         CheckValidInteger = valid
     End Function
@@ -219,7 +219,7 @@ Public Class BJCAShared
             valid = False
         End If
         If Not valid And showMessage Then
-            MsgBox("Please enter an value between " + CStr(minnum) + " and " + CStr(maxnum) + ".", MsgBoxStyle.OKOnly)
+            MsgBox("Please enter an value between " + CStr(minnum) + " and " + CStr(maxnum) + ".", MsgBoxStyle.OkOnly)
         End If
         CheckValidDecimal = valid
     End Function

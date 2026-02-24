@@ -330,15 +330,15 @@ Imports BJ_CA.BJCAShared
     End Function
 
     Private Function HandPossible(ByVal currentHand As BJCAHandClass) As Boolean
-        HandPossible = BJHandNumerator(1, CurrentShoe.Hand.Cards(1), currentHand.Cards(1)) > 0 And _
-                   BJHandNumerator(2, CurrentShoe.Hand.Cards(2), currentHand.Cards(2)) > 0 And _
-                   BJHandNumerator(3, CurrentShoe.Hand.Cards(3), currentHand.Cards(3)) > 0 And _
-                   BJHandNumerator(4, CurrentShoe.Hand.Cards(4), currentHand.Cards(4)) > 0 And _
-                   BJHandNumerator(5, CurrentShoe.Hand.Cards(5), currentHand.Cards(5)) > 0 And _
-                   BJHandNumerator(6, CurrentShoe.Hand.Cards(6), currentHand.Cards(6)) > 0 And _
-                   BJHandNumerator(7, CurrentShoe.Hand.Cards(7), currentHand.Cards(7)) > 0 And _
-                   BJHandNumerator(8, CurrentShoe.Hand.Cards(8), currentHand.Cards(8)) > 0 And _
-                   BJHandNumerator(9, CurrentShoe.Hand.Cards(9), currentHand.Cards(9)) > 0 And _
+        HandPossible = BJHandNumerator(1, CurrentShoe.Hand.Cards(1), currentHand.Cards(1)) > 0 And
+                   BJHandNumerator(2, CurrentShoe.Hand.Cards(2), currentHand.Cards(2)) > 0 And
+                   BJHandNumerator(3, CurrentShoe.Hand.Cards(3), currentHand.Cards(3)) > 0 And
+                   BJHandNumerator(4, CurrentShoe.Hand.Cards(4), currentHand.Cards(4)) > 0 And
+                   BJHandNumerator(5, CurrentShoe.Hand.Cards(5), currentHand.Cards(5)) > 0 And
+                   BJHandNumerator(6, CurrentShoe.Hand.Cards(6), currentHand.Cards(6)) > 0 And
+                   BJHandNumerator(7, CurrentShoe.Hand.Cards(7), currentHand.Cards(7)) > 0 And
+                   BJHandNumerator(8, CurrentShoe.Hand.Cards(8), currentHand.Cards(8)) > 0 And
+                   BJHandNumerator(9, CurrentShoe.Hand.Cards(9), currentHand.Cards(9)) > 0 And
                    BJHandNumerator(10, CurrentShoe.Hand.Cards(10), currentHand.Cards(10)) > 0
     End Function
 
@@ -422,21 +422,21 @@ Imports BJ_CA.BJCAShared
 
         Select Case total
             Case Is < 17
-                lose = handEVs.DealerProbs(upcard, 17 - 17) + _
-                    handEVs.DealerProbs(upcard, 18 - 17) + handEVs.DealerProbs(upcard, 19 - 17) + _
+                lose = handEVs.DealerProbs(upcard, 17 - 17) +
+                    handEVs.DealerProbs(upcard, 18 - 17) + handEVs.DealerProbs(upcard, 19 - 17) +
                     handEVs.DealerProbs(upcard, 20 - 17) + handEVs.DealerProbs(upcard, 21 - 17)
                 push = 0
             Case 17
-                lose = handEVs.DealerProbs(upcard, 18 - 17) + _
-                    handEVs.DealerProbs(upcard, 19 - 17) + handEVs.DealerProbs(upcard, 20 - 17) + _
+                lose = handEVs.DealerProbs(upcard, 18 - 17) +
+                    handEVs.DealerProbs(upcard, 19 - 17) + handEVs.DealerProbs(upcard, 20 - 17) +
                     handEVs.DealerProbs(upcard, 21 - 17)
                 push = handEVs.DealerProbs(upcard, 17 - 17)
             Case 18
-                lose = handEVs.DealerProbs(upcard, 19 - 17) + _
+                lose = handEVs.DealerProbs(upcard, 19 - 17) +
                     handEVs.DealerProbs(upcard, 20 - 17) + handEVs.DealerProbs(upcard, 21 - 17)
                 push = handEVs.DealerProbs(upcard, 18 - 17)
             Case 19
-                lose = handEVs.DealerProbs(upcard, 20 - 17) + _
+                lose = handEVs.DealerProbs(upcard, 20 - 17) +
                     handEVs.DealerProbs(upcard, 21 - 17)
                 push = handEVs.DealerProbs(upcard, 19 - 17)
             Case 20
@@ -1651,11 +1651,11 @@ Imports BJ_CA.BJCAShared
             End Select
         End If
 
-        If cStrat.HandEVs(index).SPreallowed(upcard) = False And _
-            cStrat.HandEVs(index).HPreallowed(upcard) = False And _
-            cStrat.HandEVs(index).PAllowed(upcard) = False And _
-            cStrat.HandEVs(index).DPreallowed(upcard) = False And _
-            cStrat.HandEVs(index).RPreallowed(upcard) = False And _
+        If cStrat.HandEVs(index).SPreallowed(upcard) = False And
+            cStrat.HandEVs(index).HPreallowed(upcard) = False And
+            cStrat.HandEVs(index).PAllowed(upcard) = False And
+            cStrat.HandEVs(index).DPreallowed(upcard) = False And
+            cStrat.HandEVs(index).RPreallowed(upcard) = False And
             cStrat.HandEVs(index).PreForced(upcard) = True Then
 
             cStrat.HandEVs(index).SPreallowed(upcard) = True
@@ -1666,10 +1666,10 @@ Imports BJ_CA.BJCAShared
             cStrat.HandEVs(index).PreForced(upcard) = False
             cStrat.HandEVs(index).EVs.Strat(upcard) = BJCAGlobalsClass.Strat.None
         End If
-        If cStrat.HandEVs(index).SPostallowed(upcard) = False And _
-            cStrat.HandEVs(index).HPostallowed(upcard) = False And _
-            cStrat.HandEVs(index).DPostallowed(upcard) = False And _
-            cStrat.HandEVs(index).RPostallowed(upcard) = False And _
+        If cStrat.HandEVs(index).SPostallowed(upcard) = False And
+            cStrat.HandEVs(index).HPostallowed(upcard) = False And
+            cStrat.HandEVs(index).DPostallowed(upcard) = False And
+            cStrat.HandEVs(index).RPostallowed(upcard) = False And
             cStrat.HandEVs(index).PostForced(upcard) = True Then
 
             cStrat.HandEVs(index).SPostallowed(upcard) = True
@@ -2889,13 +2889,13 @@ Imports BJ_CA.BJCAShared
             winEV = pHand.HandEVs.StandEV(upcard) + loseEV
             pushEV = pHand.HandEVs.StandPushEV(upcard)
 
-            If BonusRulesList.L(Rule).RuleOn And BonusRulesList.L(Rule).Suited Then
+            If BonusRulesList.L(rule).RuleOn And BonusRulesList.L(rule).Suited Then
                 'First see if the hand qualifies to have the rule applied to it
 
                 For suit = 0 To 3
                     If pHand.HandEVs.SuitedPossible(upcard, suit) Then
-                        If BonusRulesList.L(Rule).SpecificSuit Then
-                            If BonusRulesList.L(Rule).SuitToWin = suit Then
+                        If BonusRulesList.L(rule).SpecificSuit Then
+                            If BonusRulesList.L(rule).SuitToWin = suit Then
                                 pSuited = 0
                                 pSpecificSuit = 1
                             Else
@@ -2909,15 +2909,15 @@ Imports BJ_CA.BJCAShared
 
                         'Apply the upcard limitation on BJ Payoffs here
                         '   No need to check for other UC's since bjprob is 0 for them
-                        If (upcard = 1 And BonusRulesList.L(Rule).BJAUp) Or (upcard = 10 And BonusRulesList.L(Rule).BJTUp) Then
+                        If (upcard = 1 And BonusRulesList.L(rule).BJAUp) Or (upcard = 10 And BonusRulesList.L(rule).BJTUp) Then
                             If pSuited > 0 Then
-                                tempBJPayoff = BonusRulesList.L(Rule).PayoffSuitedBJ
+                                tempBJPayoff = BonusRulesList.L(rule).PayoffSuitedBJ
                                 newHandEVs.SuitedStandBJEV(upcard, suit) = 0
                             ElseIf pSpecificSuit > 0 Then
-                                tempBJPayoff = BonusRulesList.L(Rule).PayoffSpecificSuitBJ
+                                tempBJPayoff = BonusRulesList.L(rule).PayoffSpecificSuitBJ
                                 newHandEVs.SuitedStandBJEV(upcard, suit) = 0
                             Else
-                                tempBJPayoff = BonusRulesList.L(Rule).PayoffSuitedBJ
+                                tempBJPayoff = BonusRulesList.L(rule).PayoffSuitedBJ
                                 newHandEVs.SuitedStandBJEV(upcard, suit) = tempBJPayoff
                             End If
                         Else
@@ -2928,57 +2928,57 @@ Imports BJ_CA.BJCAShared
                         'The upcard can only be non-zero and therefore only match if UCPayoff <> 0
                         If (upcard <> 1 And upcard <> 10) Or (upcard = 1 And CheckAce And pHand.Hand.NumCards > 2) Or (upcard = 10 And CheckTen And pHand.Hand.NumCards > 2) Then
                             'No BJ Possible if UC<>(1 or 10) or if Checking and >2 cards in hand
-                            If Not BonusRulesList.L(Rule).MustWin And Not BonusRulesList.L(Rule).HandContinues Then
+                            If Not BonusRulesList.L(rule).MustWin And Not BonusRulesList.L(rule).HandContinues Then
                                 'Only need to include pushevs when not winning since otherwise adding 0
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffUCSuited
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffUCSuited
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffSuited
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffSuited
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffUCSpecificSuit
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffUCSpecificSuit
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffSpecificSuit
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffSpecificSuit
                                     End If
                                 End If
-                            ElseIf BonusRulesList.L(Rule).HandContinues Then
+                            ElseIf BonusRulesList.L(rule).HandContinues Then
                                 'Only need to include pushevs when not winning since otherwise adding 0
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffUCSuited
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffUCSuited
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
                                     Else
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffSuited
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffSuited
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffUCSpecificSuit
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffUCSpecificSuit
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
                                     Else
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffSpecificSuit
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffSpecificSuit
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
                                     End If
                                 End If
@@ -2986,22 +2986,22 @@ Imports BJ_CA.BJCAShared
                                 'Since hand Must Win, pushev is unaffected
                                 '                            newHandEVs.StandPushEV(upcard) = pushEV
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(Rule).PayoffUCSuited * winEV - loseEV)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(rule).PayoffUCSuited * winEV - loseEV)
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(Rule).PayoffSuited * winEV - loseEV)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(rule).PayoffSuited * winEV - loseEV)
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(Rule).PayoffUCSpecificSuit * winEV - loseEV)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(rule).PayoffUCSpecificSuit * winEV - loseEV)
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(Rule).PayoffSpecificSuit * winEV - loseEV)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(rule).PayoffSpecificSuit * winEV - loseEV)
                                     End If
                                 End If
                             End If
@@ -3009,63 +3009,63 @@ Imports BJ_CA.BJCAShared
 
                         ElseIf (upcard = 1 And Not CheckAce) Or (upcard = 10 And Not CheckTen) Then
                             'No checking for BJ but BJ possible
-                            If Not BonusRulesList.L(Rule).MustWin And Not BonusRulesList.L(Rule).HandContinues Then
+                            If Not BonusRulesList.L(rule).MustWin And Not BonusRulesList.L(rule).HandContinues Then
                                 'Only need to include pushevs when not winning since otherwise adding 0
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * ((1 - bjprob) * ((winEV - loseEV) + bjprob) + bjprob * tempBJPayoff)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * ((1 - bjprob) * BonusRulesList.L(Rule).PayoffUCSuited + bjprob * tempBJPayoff)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * ((1 - bjprob) * BonusRulesList.L(rule).PayoffUCSuited + bjprob * tempBJPayoff)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * ((1 - bjprob) * BonusRulesList.L(Rule).PayoffSuited + bjprob * tempBJPayoff)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * ((1 - bjprob) * BonusRulesList.L(rule).PayoffSuited + bjprob * tempBJPayoff)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * ((1 - bjprob) * ((winEV - loseEV) + bjprob) + bjprob * tempBJPayoff)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * ((1 - bjprob) * BonusRulesList.L(Rule).PayoffUCSpecificSuit + bjprob * tempBJPayoff)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * ((1 - bjprob) * BonusRulesList.L(rule).PayoffUCSpecificSuit + bjprob * tempBJPayoff)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * ((1 - bjprob) * BonusRulesList.L(Rule).PayoffSpecificSuit + bjprob * tempBJPayoff)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * ((1 - bjprob) * BonusRulesList.L(rule).PayoffSpecificSuit + bjprob * tempBJPayoff)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                     End If
                                 End If
-                            ElseIf BonusRulesList.L(Rule).HandContinues Then
+                            ElseIf BonusRulesList.L(rule).HandContinues Then
                                 'Only need to include pushevs when not winning since otherwise adding 0
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffUCSuited
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffUCSuited
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
                                     Else
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffSuited
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffSuited
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffUCSpecificSuit
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffUCSpecificSuit
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
                                     Else
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffSpecificSuit
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffSpecificSuit
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
                                     End If
                                 End If
@@ -3074,22 +3074,22 @@ Imports BJ_CA.BJCAShared
                                 'Since hand Must Win, pushev is unaffected and hand cannot beat BJ
                                 '                            newHandEVs.StandPushEV(upcard) = pushEV
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(Rule).PayoffUCSuited * winEV - loseEV)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(rule).PayoffUCSuited * winEV - loseEV)
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(Rule).PayoffSuited * winEV - loseEV)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(rule).PayoffSuited * winEV - loseEV)
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(Rule).PayoffUCSpecificSuit * winEV - loseEV)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(rule).PayoffUCSpecificSuit * winEV - loseEV)
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(Rule).PayoffSpecificSuit * winEV - loseEV)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(rule).PayoffSpecificSuit * winEV - loseEV)
                                     End If
                                 End If
                             End If
@@ -3099,84 +3099,84 @@ Imports BJ_CA.BJCAShared
                             'BJ Possible and dealer checking and player's hand has 2 cards
                             'No BJ adjustments need to be made when the hand doesn't beat BJ
                             'I.e. if PayoffBJ is -1, then the hand is already appropriately conditioned
-                            If Not BonusRulesList.L(Rule).MustWin And Not BonusRulesList.L(Rule).HandContinues Then
+                            If Not BonusRulesList.L(rule).MustWin And Not BonusRulesList.L(rule).HandContinues Then
                                 'Only need to include pushevs when not winning since otherwise adding 0
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         '                                    netEV = bjprob * tempBJPayoff + (1 - bjprob) * BonusRulesList.L(rule).PayoffUC
                                         '                                    newHandEVs.suitedstandev(upcard,suit) = pSuited * (netEV + bjprob) / (1 - bjprob)
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffUCSuited
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffUCSuited
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                     Else
                                         '                                    netEV = bjprob * tempBJPayoff + (1 - bjprob) * BonusRulesList.L(rule).PayoffSuited
                                         '                                    newHandEVs.suitedstandev(upcard,suit) = pSuited * (netEV + bjprob) / (1 - bjprob)
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffSuited
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffSuited
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         '                                    netEV = bjprob * tempBJPayoff + (1 - bjprob) * BonusRulesList.L(rule).PayoffUC
                                         '                                    newHandEVs.suitedstandev(upcard,suit) = pSpecificSuit * (netEV + bjprob) / (1 - bjprob)
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffUCSpecificSuit
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffUCSpecificSuit
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                     Else
                                         '                                    netEV = bjprob * tempBJPayoff + (1 - bjprob) * BonusRulesList.L(rule).PayoffSpecificSuit
                                         '                                    newHandEVs.suitedstandev(upcard,suit) = pSpecificSuit * (netEV + bjprob) / (1 - bjprob)
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffSpecificSuit
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffSpecificSuit
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                     End If
                                 End If
-                            ElseIf BonusRulesList.L(Rule).HandContinues Then
+                            ElseIf BonusRulesList.L(rule).HandContinues Then
                                 'Only need to include pushevs when not winning since otherwise adding 0
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * (-1)
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         '                                    netEV = bjprob * tempBJPayoff + (1 - bjprob) * ((winEV - loseEV) + BonusRulesList.L(rule).PayoffUC)
                                         '                                    newHandEVs.suitedstandev(upcard,suit) = pSuited * (netEV + bjprob) / (1 - bjprob)
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffUCSuited
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffUCSuited
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                         '                               newHandEVs.StandPushEV(upcard) = pSuited * pushEV
                                     Else
                                         '                                   netEV = bjprob * tempBJPayoff + (1 - bjprob) * ((winEV - loseEV) + BonusRulesList.L(rule).PayoffSuited)
                                         '                                   newHandEVs.suitedstandev(upcard,suit) = pSuited * (netEV + bjprob) / (1 - bjprob)
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(Rule).PayoffSuited
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSuited * BonusRulesList.L(rule).PayoffSuited
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSuited * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSuited * pushEV
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * (-1)
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         '                                    netEV = bjprob * tempBJPayoff + (1 - bjprob) * ((winEV - loseEV) + BonusRulesList.L(rule).PayoffUC)
                                         '                                    newHandEVs.suitedstandev(upcard,suit) = pSpecificSuit * (netEV + bjprob) / (1 - bjprob)
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffUCSpecificSuit
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffUCSpecificSuit
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
                                     Else
                                         '                                   netEV = bjprob * tempBJPayoff + (1 - bjprob) * ((winEV - loseEV) + BonusRulesList.L(rule).PayoffSpecificSuit)
                                         '                                   newHandEVs.suitedstandev(upcard,suit) = pSpecificSuit * (netEV + bjprob) / (1 - bjprob)
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(Rule).PayoffSpecificSuit
+                                        newHandEVs.SuitedBonusEV(upcard, suit) = pSpecificSuit * BonusRulesList.L(rule).PayoffSpecificSuit
                                         newHandEVs.SuitedStandBJEV(upcard, suit) = pSpecificSuit * tempBJPayoff
                                         '                                newHandEVs.StandPushEV(upcard) = pSpecificSuit * pushEV
                                     End If
@@ -3185,22 +3185,22 @@ Imports BJ_CA.BJCAShared
                                 'Since hand Must Win, pushev is unaffected and BJ hand cannot beat BJ
                                 '                            newHandEVs.StandPushEV(upcard) = pushEV
                                 If pSuited > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSuited = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSuited = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (winEV - loseEV)
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSuited > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(Rule).PayoffUCSuited * winEV - loseEV)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSuited > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(rule).PayoffUCSuited * winEV - loseEV)
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(Rule).PayoffSuited * winEV - loseEV)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSuited * (BonusRulesList.L(rule).PayoffSuited * winEV - loseEV)
                                     End If
                                 End If
 
                                 If pSpecificSuit > 0 Then
-                                    If BonusRulesList.L(Rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
+                                    If BonusRulesList.L(rule).PayoffSpecificSuit = 0 And Not (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
                                         newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (winEV - loseEV)
-                                    ElseIf (BonusRulesList.L(Rule).Upcard = upcard And BonusRulesList.L(Rule).PayoffUCSpecificSuit > 0) Then
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(Rule).PayoffUCSpecificSuit * winEV - loseEV)
+                                    ElseIf (BonusRulesList.L(rule).Upcard = upcard And BonusRulesList.L(rule).PayoffUCSpecificSuit > 0) Then
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(rule).PayoffUCSpecificSuit * winEV - loseEV)
                                     Else
-                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(Rule).PayoffSpecificSuit * winEV - loseEV)
+                                        newHandEVs.SuitedStandEV(upcard, suit) = pSpecificSuit * (BonusRulesList.L(rule).PayoffSpecificSuit * winEV - loseEV)
                                     End If
                                 End If
                             End If
@@ -5190,7 +5190,7 @@ Imports BJ_CA.BJCAShared
                             DEV = 0
                             dPush = 0
                             dRes = 0
-                            dresev = 0
+                            dResEV = 0
                             cDEV = 0
                             netCEV = 0
                             For i = 1 To 10 'Deal double card
@@ -5202,7 +5202,7 @@ Imports BJ_CA.BJCAShared
                                     If (BBO Or OBBO Or AOBBO) And ((upcard = 1 And Not CheckAce) Or (upcard = 10 And Not CheckTen)) Then
                                         CheckAce = True
                                         CheckTen = True
-                                        cdProb = CardProb(i, upcard)
+                                        cDProb = CardProb(i, upcard)
                                         CheckAce = False
                                         CheckTen = False
                                     End If
@@ -7623,25 +7623,25 @@ Imports BJ_CA.BJCAShared
 
                                     Select Case TD.StratTD(total, soft).Strat(upcard)
                                         Case C.Strat.D
-                                            If newevs.NetDProb(upcard) = 0 Then
+                                            If newEvs.NetDProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.H)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.D)
                                             End If
                                         Case C.Strat.DS
-                                            If newevs.NetDProb(upcard) = 0 Then
+                                            If newEvs.NetDProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.S)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.D)
                                             End If
                                         Case C.Strat.R
-                                            If newevs.NetSurrProb(upcard) = 0 Then
+                                            If newEvs.NetSurrProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.H)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.R)
                                             End If
                                         Case C.Strat.RS
-                                            If newevs.NetSurrProb(upcard) = 0 Then
+                                            If newEvs.NetSurrProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.S)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.R)
@@ -7693,25 +7693,25 @@ Imports BJ_CA.BJCAShared
                                     newEvs = ComputeNCardStratEVs(TC, total, soft, upcard, nCards, False, False, True)
                                     Select Case TC.StratTD(total, soft).Strat(upcard)
                                         Case C.Strat.D
-                                            If newevs.NetDProb(upcard) = 0 Then
+                                            If newEvs.NetDProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.H)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.D)
                                             End If
                                         Case C.Strat.DS
-                                            If newevs.NetDProb(upcard) = 0 Then
+                                            If newEvs.NetDProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.S)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.D)
                                             End If
                                         Case C.Strat.R
-                                            If newevs.NetSurrProb(upcard) = 0 Then
+                                            If newEvs.NetSurrProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.H)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.R)
                                             End If
                                         Case C.Strat.RS
-                                            If newevs.NetSurrProb(upcard) = 0 Then
+                                            If newEvs.NetSurrProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.S)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.R)
@@ -7763,25 +7763,25 @@ Imports BJ_CA.BJCAShared
                                     newEvs = ComputeNCardStratEVs(Forced, total, soft, upcard, nCards, False, False, True)
                                     Select Case Forced.StratTD(total, soft).Strat(upcard)
                                         Case C.Strat.D
-                                            If newevs.NetDProb(upcard) = 0 Then
+                                            If newEvs.NetDProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.H)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.D)
                                             End If
                                         Case C.Strat.DS
-                                            If newevs.NetDProb(upcard) = 0 Then
+                                            If newEvs.NetDProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.S)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.D)
                                             End If
                                         Case C.Strat.R
-                                            If newevs.NetSurrProb(upcard) = 0 Then
+                                            If newEvs.NetSurrProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.H)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.R)
                                             End If
                                         Case C.Strat.RS
-                                            If newevs.NetSurrProb(upcard) = 0 Then
+                                            If newEvs.NetSurrProb(upcard) = 0 Then
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.S)
                                             Else
                                                 stratSame = (newEvs.Strat(upcard) = C.Strat.R)
@@ -9837,13 +9837,13 @@ Imports BJ_CA.BJCAShared
                         For ncards = index + 1 To 21
                             Dim nCardStrat As New BJCATDStratClass
 
-                            ncardStrat = ComputeNCardStratEVs(Opt, total, False + 1, upcard, ncards, False, False, True)
+                            nCardStrat = ComputeNCardStratEVs(Opt, total, False + 1, upcard, ncards, False, False, True)
 
-                            If twoCardStrat.Strat(upcard) <> C.Strat.None And ncardStrat.Strat(upcard) <> C.Strat.None And ncardStrat.Strat(upcard) <> twoCardStrat.Strat(upcard) Then
+                            If twoCardStrat.Strat(upcard) <> C.Strat.None And nCardStrat.Strat(upcard) <> C.Strat.None And nCardStrat.Strat(upcard) <> twoCardStrat.Strat(upcard) Then
                                 Dim ncardOrMoreStrat As New BJCATDStratClass
 
                                 ncardOrMoreStrat = ComputeNCardStratEVs(Opt, total, False + 1, upcard, ncards, True, False, True)
-                                If ncardOrMoreStrat.Strat(upcard) = ncardStrat.Strat(upcard) Then
+                                If ncardOrMoreStrat.Strat(upcard) = nCardStrat.Strat(upcard) Then
                                     Dim ForcedRule As New BJCAForcedRulesClass
 
                                     Forced.StratTD(total, False + 1).NCardStrat(upcard) = ncardOrMoreStrat.Strat(upcard)
@@ -9971,13 +9971,13 @@ Imports BJ_CA.BJCAShared
                         For ncards = index + 1 To 21
                             Dim nCardStrat As New BJCATDStratClass
 
-                            ncardStrat = ComputeNCardStratEVs(Opt, total, True + 1, upcard, ncards, False, False, True)
+                            nCardStrat = ComputeNCardStratEVs(Opt, total, True + 1, upcard, ncards, False, False, True)
 
-                            If twoCardStrat.Strat(upcard) <> C.Strat.None And ncardStrat.Strat(upcard) <> C.Strat.None And ncardStrat.Strat(upcard) <> twoCardStrat.Strat(upcard) Then
+                            If twoCardStrat.Strat(upcard) <> C.Strat.None And nCardStrat.Strat(upcard) <> C.Strat.None And nCardStrat.Strat(upcard) <> twoCardStrat.Strat(upcard) Then
                                 Dim ncardOrMoreStrat As New BJCATDStratClass
 
                                 ncardOrMoreStrat = ComputeNCardStratEVs(Opt, total, True + 1, upcard, ncards, True, False, True)
-                                If ncardOrMoreStrat.Strat(upcard) = ncardStrat.Strat(upcard) Then
+                                If ncardOrMoreStrat.Strat(upcard) = nCardStrat.Strat(upcard) Then
                                     Dim ForcedRule As New BJCAForcedRulesClass
 
                                     Forced.StratTD(total, True + 1).NCardStrat(upcard) = ncardOrMoreStrat.Strat(upcard)
@@ -10105,13 +10105,13 @@ Imports BJ_CA.BJCAShared
                         For ncards = index + 1 To 21
                             Dim nCardStrat As New BJCATDStratClass
 
-                            ncardStrat = ComputeNCardStratEVs(Opt, total, False + 1, upcard, ncards, False, False, True)
+                            nCardStrat = ComputeNCardStratEVs(Opt, total, False + 1, upcard, ncards, False, False, True)
 
-                            If twoCardStrat.Strat(upcard) <> C.Strat.None And ncardStrat.Strat(upcard) <> C.Strat.None And ncardStrat.Strat(upcard) <> twoCardStrat.Strat(upcard) Then
+                            If twoCardStrat.Strat(upcard) <> C.Strat.None And nCardStrat.Strat(upcard) <> C.Strat.None And nCardStrat.Strat(upcard) <> twoCardStrat.Strat(upcard) Then
                                 Dim ncardOrMoreStrat As New BJCATDStratClass
 
                                 ncardOrMoreStrat = ComputeNCardStratEVs(Opt, total, False + 1, upcard, ncards, True, False, True)
-                                If ncardOrMoreStrat.Strat(upcard) = ncardStrat.Strat(upcard) Then
+                                If ncardOrMoreStrat.Strat(upcard) = nCardStrat.Strat(upcard) Then
                                     Dim ForcedRule As New BJCAForcedRulesClass
 
                                     Forced.StratTD(total, False + 1).NCardStrat(upcard) = ncardOrMoreStrat.Strat(upcard)

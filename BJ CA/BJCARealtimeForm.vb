@@ -1112,7 +1112,7 @@ Public Class BJCARealtimeForm
             If CurrentHandShoe.HandPossible(NetOtherPlayersHands) Then
                 OtherPlayersHandsStrings(DirectCast(sender, IndexedTextBox).Index) = DirectCast(sender, IndexedTextBox).Text
             Else
-                MsgBox("This Other Player's hand is not possible given the current shoe.", MsgBoxStyle.OKOnly)
+                MsgBox("This Other Player's hand is not possible given the current shoe.", MsgBoxStyle.OkOnly)
                 OtherPlayersHands(DirectCast(sender, IndexedTextBox).Index).Text = OtherPlayersHandsStrings(DirectCast(sender, IndexedTextBox).Index)
                 If OtherPlayersHandsStrings(DirectCast(sender, IndexedTextBox).Index) <> "" Then
                     OtherPlayersHands(DirectCast(sender, IndexedTextBox).Index).Hand.Empty()
@@ -1122,7 +1122,7 @@ Public Class BJCARealtimeForm
                 End If
             End If
         Else
-            MsgBox("This is not a valid card string.", MsgBoxStyle.OKOnly)
+            MsgBox("This is not a valid card string.", MsgBoxStyle.OkOnly)
             OtherPlayersHands(DirectCast(sender, IndexedTextBox).Index).Text = OtherPlayersHandsStrings(DirectCast(sender, IndexedTextBox).Index)
             If OtherPlayersHandsStrings(DirectCast(sender, IndexedTextBox).Index) <> "" Then
                 OtherPlayersHands(DirectCast(sender, IndexedTextBox).Index).Hand.Empty()
@@ -1153,7 +1153,7 @@ Public Class BJCARealtimeForm
                 End If
                 CurrentUpcard = CInt(upcardtext)
             Else
-                MsgBox("This Dealer's hand is not possible given the current shoe.", MsgBoxStyle.OKOnly)
+                MsgBox("This Dealer's hand is not possible given the current shoe.", MsgBoxStyle.OkOnly)
                 DealersHand.Text = DealersHandString
                 If DealersHandString <> "" Then
                     DealersHand.Hand.Empty()
@@ -1171,7 +1171,7 @@ Public Class BJCARealtimeForm
                 End If
             End If
         ElseIf DealersHand.Text <> "" Then
-            MsgBox("This is not a valid card string.", MsgBoxStyle.OKOnly)
+            MsgBox("This is not a valid card string.", MsgBoxStyle.OkOnly)
             DealersHand.Text = DealersHandString
             If DealersHandString <> "" Then
                 DealersHand.Hand.Empty()
@@ -1239,7 +1239,7 @@ Public Class BJCARealtimeForm
             If CurrentHandShoe.HandPossible(NetPlayerHand) Then
                 If Not ClearingForm And CurrentPHandIndex > 0 And CurrentSPL > 0 Then
                     If PlayerHands(CurrentPHandIndex).Text = "" Then
-                        MsgBox("The split cards must match.", MsgBoxStyle.OKOnly)
+                        MsgBox("The split cards must match.", MsgBoxStyle.OkOnly)
                         If PlayerHandsStrings(CurrentPHandIndex) <> "" Then
                             PlayerHands(CurrentPHandIndex).Text = PlayerHandsStrings(CurrentPHandIndex)
                             PlayerHands(CurrentPHandIndex).Hand.Empty()
@@ -1249,7 +1249,7 @@ Public Class BJCARealtimeForm
                             PlayerHands(CurrentPHandIndex).Hand.Empty()
                         End If
                     ElseIf PlayerHands(CurrentPHandIndex).Text.Chars(0) <> PlayerHands(0).Text.Chars(0) Then
-                        MsgBox("The split cards must match.", MsgBoxStyle.OKOnly)
+                        MsgBox("The split cards must match.", MsgBoxStyle.OkOnly)
                         If PlayerHandsStrings(CurrentPHandIndex) <> "" Then
                             PlayerHands(CurrentPHandIndex).Text = PlayerHandsStrings(CurrentPHandIndex)
                             PlayerHands(CurrentPHandIndex).Hand.Empty()
@@ -1281,7 +1281,7 @@ Public Class BJCARealtimeForm
                     PlayerHandsStrings(CurrentPHandIndex) = DirectCast(sender, IndexedTextBox).Text
                 End If
             Else
-                MsgBox("This Player's hand is not possible given the current shoe.", MsgBoxStyle.OKOnly)
+                MsgBox("This Player's hand is not possible given the current shoe.", MsgBoxStyle.OkOnly)
                 If PlayerHandsStrings(CurrentPHandIndex) <> "" Then
                     PlayerHands(CurrentPHandIndex).Text = PlayerHandsStrings(CurrentPHandIndex)
                     PlayerHands(CurrentPHandIndex).Hand.Empty()
@@ -1292,7 +1292,7 @@ Public Class BJCARealtimeForm
                 End If
             End If
         Else
-            MsgBox("This is not a valid card string.", MsgBoxStyle.OKOnly)
+            MsgBox("This is not a valid card string.", MsgBoxStyle.OkOnly)
             If PlayerHandsStrings(CurrentPHandIndex) <> "" Then
                 PlayerHands(CurrentPHandIndex).Text = PlayerHandsStrings(CurrentPHandIndex)
                 PlayerHands(CurrentPHandIndex).Hand.Empty()

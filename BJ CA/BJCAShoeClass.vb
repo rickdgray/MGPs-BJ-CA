@@ -202,15 +202,15 @@
     End Sub
 
     Public Function HandPossible(ByVal hand As BJCAHandClass) As Boolean
-        HandPossible = Cards(1) >= hand.Cards(1) And _
-                    Cards(2) >= hand.Cards(2) And _
-                    Cards(3) >= hand.Cards(3) And _
-                    Cards(4) >= hand.Cards(4) And _
-                    Cards(5) >= hand.Cards(5) And _
-                    Cards(6) >= hand.Cards(6) And _
-                    Cards(7) >= hand.Cards(7) And _
-                    Cards(8) >= hand.Cards(8) And _
-                    Cards(9) >= hand.Cards(9) And _
+        HandPossible = Cards(1) >= hand.Cards(1) And
+                    Cards(2) >= hand.Cards(2) And
+                    Cards(3) >= hand.Cards(3) And
+                    Cards(4) >= hand.Cards(4) And
+                    Cards(5) >= hand.Cards(5) And
+                    Cards(6) >= hand.Cards(6) And
+                    Cards(7) >= hand.Cards(7) And
+                    Cards(8) >= hand.Cards(8) And
+                    Cards(9) >= hand.Cards(9) And
                     Cards(10) >= hand.Cards(0)
     End Function
 

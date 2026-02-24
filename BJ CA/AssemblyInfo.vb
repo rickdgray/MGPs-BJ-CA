@@ -8,16 +8,16 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("")> 
-<Assembly: AssemblyCopyright("")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
+<Assembly: AssemblyTitle("")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("")>
+<Assembly: AssemblyCopyright("")>
+<Assembly: AssemblyTrademark("")>
+<Assembly: CLSCompliant(True)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("545B496B-13C6-4452-B87B-68FA9F77B246")> 
+<Assembly: Guid("545B496B-13C6-4452-B87B-68FA9F77B246")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -29,4 +29,4 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("1.0.*")> 
+<Assembly: AssemblyVersion("1.0.*")>
